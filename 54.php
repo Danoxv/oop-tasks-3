@@ -1,27 +1,27 @@
 <?php
 
-//class User
-//{
-//    private $name;
-//    private $age;
-//
-//    public function __construct($name, $age)
-//    {
-//        $this->name = $name;
-//        $this->age = $age;
-//    }
-//
-//    public function __get($prop)
-//    {
-//        return $this->$prop;
-//    }
-//    public function getName(){
-//        return $this->name;
-//    }
-//}
-//$u = new User("Игорь", 6 );
-//echo $u->name;
-//echo $u->age;
+class User
+{
+    private $name;
+    private $age;
+
+    public function __construct($name, $age)
+    {
+        $this->name = $name;
+        $this->age = $age;
+    }
+
+    public function __get($prop)
+    {
+        return $this->$prop;
+    }
+    public function getName(){
+        return $this->name;
+    }
+}
+$u = new User("Игорь", 6 );
+echo $u->name;
+echo $u->age;
 
 //Задача 54.2 Сделайте класс Date с публичными свойствами year (год), month (месяц) и day (день).
 // С помощью магии сделайте свойство weekDay,
