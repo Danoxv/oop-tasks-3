@@ -7,8 +7,15 @@ class User
 
     public function __set($prop, $val)
     {
-        if ($prop != '' || $val >= 0 && $val <= 70) { // проверяем имя на непустоту
-            $this->$prop = $val;
+        if ($prop == 'name') {
+            if ($prop != '') { // проверяем имя на непустоту
+                $this->$prop = $val;
+            }
+
+        }elseif($prop == 'age'){
+            if ($val >= 0 && $val <= 70) {
+                $this->$prop = $val;
+            }
         }
 
     }
